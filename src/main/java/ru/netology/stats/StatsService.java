@@ -44,7 +44,7 @@ public class StatsService {
         int month = 0;
         for (long sale : sales) {
 
-            if (sale < sumSales(sales) / sales.length)
+            if (sale < avgSales(sales))
                 month = month + 1;
         }
         return month;
@@ -54,7 +54,7 @@ public class StatsService {
         int month = 0;
         for (long sale : sales) {
 
-            if (sale > sumSales(sales) / sales.length)
+            if (sale > avgSales(sales))
                 month = month + 1;
         }
         return month;
