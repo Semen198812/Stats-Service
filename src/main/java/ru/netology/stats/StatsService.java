@@ -42,20 +42,22 @@ public class StatsService {
 
     public int minAvgSales(int[] sales) {
         int month = 0;
-        for (long sale : sales) {
-
-            if (sale < avgSales(sales))
+        int avg = avgSales(sales);
+        for (int sale : sales) {
+            if (sale < avg) {
                 month = month + 1;
+            }
         }
         return month;
     }
 
     public int maxAvgSales(int[] sales) {
         int month = 0;
-        for (long sale : sales) {
-
-            if (sale > avgSales(sales))
+        int avg = avgSales(sales);
+        for (int sale : sales) {
+            if (sale > avg) {
                 month = month + 1;
+            }
         }
         return month;
     }
